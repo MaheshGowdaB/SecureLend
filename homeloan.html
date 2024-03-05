@@ -145,6 +145,11 @@
         display: none;
       }
     </style>
+    <style>
+      body {
+        background-color: rgb(234, 245, 248);
+      }
+    </style>
   </head>
   <body>
     <header class="l-header" id="header">
@@ -166,9 +171,6 @@
             <li class="nav__item">
               <a href="homeloan.html" class="nav__link">HOME LOAN</a>
             </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">CONTACT</a>
-            </li>
           </ul>
         </div>
         <div class="nav__toggle" id="nav-toggle">
@@ -179,7 +181,7 @@
 
     <div class="container">
       <div class="card">
-        <h1>Credit Card Details</h1>
+        <h1>Home Loan Details</h1>
         <form id="creditCardForm" method="post" onsubmit="submitForm(event)">
           <div class="personal-details">
             <h2>Personal Details</h2>
@@ -206,7 +208,7 @@
             </div>
           </div>
           <div class="address-details">
-            <h2>Home Loan Details</h2>
+            <h2>Address Details</h2>
             <div class="form-group">
               <label for="address">Address:</label>
               <input type="text" id="address" name="address" required />
