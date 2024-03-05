@@ -41,11 +41,6 @@
         margin-top: 30px;
       }
 
-      .personal-details,
-      .address-details {
-        margin-bottom: 20px;
-      }
-
       h2 {
         font-size: 18px;
         margin-bottom: 10px;
@@ -72,8 +67,9 @@
         box-sizing: border-box;
       }
 
-      input[type="submit"] {
-        width: 100%;
+      input[type="submit"],
+      .back-btn {
+        width: calc(50% - 7.5px); /* Adjusted width for buttons */
         background-color: #007bff;
         color: #fff;
         border: none;
@@ -84,73 +80,73 @@
         transition: background-color 0.3s ease-in-out;
       }
 
-      input[type="submit"]:hover {
+      .next-btn {
+        width: calc(50% - 7.5px); /* Adjusted width for buttons */
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        align-items: center;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover,
+      .back-btn:hover {
         background-color: #0056b3;
       }
 
-      .footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        margin-top: auto;
-        text-align: center;
+      /* Next Button Styles */
+      .next-btn {
+        background-color: #4caf50;
+        align-items: center;
+        float: right; /* Align to the right */
       }
 
-      .footer__logo img {
-        height: 40px;
+      .next-btn:hover {
+        background-color: #45a049;
       }
 
-      .footer__copy {
-        margin-top: 10px;
+      .next-btn:active {
+        background-color: #3e8e41;
       }
 
-      .back-to-top {
-        margin-top: 20px;
+      /* Back Button Styles */
+      .back-btn {
+        background-color: #f44336;
+      }
+
+      .back-btn:hover {
+        background-color: #d32f2f;
+      }
+
+      .back-btn:active {
+        background-color: #b71c1c;
+      }
+
+      /* Animation for Next Button */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .button-container {
+        animation: fadeIn 0.5s ease;
+      }
+
+      /* Address details initially hidden */
+      .address-details {
+        display: none;
       }
     </style>
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-M82LCZG2");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-JLL3GVW8CQ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-JLL3GVW8CQ");
-    </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-M82LCZG2"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <a href="#" class="nav__logo">
@@ -180,9 +176,10 @@
         </div>
       </nav>
     </header>
+
     <div class="container">
       <div class="card">
-        <h1>Home Loan Details</h1>
+        <h1>Credit Card Details</h1>
         <form id="creditCardForm" method="post" onsubmit="submitForm(event)">
           <div class="personal-details">
             <h2>Personal Details</h2>
@@ -202,9 +199,14 @@
               <label for="dob">Date of Birth:</label>
               <input type="date" id="dob" name="dob" required />
             </div>
+            <div class="button-container">
+              <button class="next-btn" onclick="showAddressDetails()">
+                Next
+              </button>
+            </div>
           </div>
           <div class="address-details">
-            <h2>Address Details</h2>
+            <h2>Home Loan Details</h2>
             <div class="form-group">
               <label for="address">Address:</label>
               <input type="text" id="address" name="address" required />
@@ -225,21 +227,38 @@
               <label for="country">Country:</label>
               <input type="text" id="country" name="country" required />
             </div>
-          </div>
-          <!-- Your form fields here -->
-          <div>
-            <input type="submit" value="Submit" />
+            <div class="button-container">
+              <button class="back-btn" onclick="showPersonalDetails()">
+                Back
+              </button>
+              <input type="submit" value="Submit" class="next-btn" />
+            </div>
           </div>
         </form>
       </div>
     </div>
 
-   <script>
+    <script>
       function submitForm(event) {
         event.preventDefault();
         window.location.href = "confirm.html";
       }
+
+      function showAddressDetails() {
+        var personalDetails = document.querySelector(".personal-details");
+        var addressDetails = document.querySelector(".address-details");
+        personalDetails.style.display = "none";
+        addressDetails.style.display = "block";
+      }
+
+      function showPersonalDetails() {
+        var personalDetails = document.querySelector(".personal-details");
+        var addressDetails = document.querySelector(".address-details");
+        personalDetails.style.display = "block";
+        addressDetails.style.display = "none";
+      }
     </script>
+
     <!--========== FOOTER ==========-->
     <footer class="footer section bd-container">
       <div class="footer-content">
