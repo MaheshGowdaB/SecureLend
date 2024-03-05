@@ -41,6 +41,11 @@
         margin-top: 30px;
       }
 
+      .personal-details,
+      .address-details {
+        margin-bottom: 20px;
+      }
+
       h2 {
         font-size: 18px;
         margin-bottom: 10px;
@@ -136,14 +141,14 @@
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
+    <noscript
+      ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-M82LCZG2"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <header class="l-header" id="header">
@@ -177,52 +182,55 @@
     </header>
     <div class="container">
       <div class="card">
-        <h1>Credit card Application</h1>
-        <div class="personal-details">
-          <h2>Personal Details</h2>
-          <div class="form-group">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required />
+        <h1>Credit Card Details</h1>
+        <form id="creditCardForm" method="post" action="confirm.html">
+          <div class="personal-details">
+            <h2>Personal Details</h2>
+            <div class="form-group">
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required />
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+          <div class="address-details">
+            <h2>Address Details</h2>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" required />
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" required />
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input type="text" id="state" name="state" required />
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Zip Code:</label>
+              <input type="text" id="zipCode" name="zipCode" required />
+            </div>
+            <div class="form-group">
+              <label for="country">Country:</label>
+              <input type="text" id="country" name="country" required />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required />
+          <!-- Your form fields here -->
+          <div class="submit-btn">
+            <input type="submit" value="Submit" />
           </div>
-          <div class="form-group">
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required />
-          </div>
-        </div>
-        <div class="address-details">
-          <h2>Address Details</h2>
-          <div class="form-group">
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required />
-          </div>
-          <div class="form-group">
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required />
-          </div>
-          <div class="form-group">
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" required />
-          </div>
-          <div class="form-group">
-            <label for="zipCode">Zip Code:</label>
-            <input type="text" id="zipCode" name="zipCode" required />
-          </div>
-          <div class="form-group">
-            <label for="country">Country:</label>
-            <input type="text" id="country" name="country" required />
-          </div>
-        </div>
-        <div class="submit-btn">
-          <input type="submit" value="Submit" />
-        </div>
+        </form>
       </div>
     </div>
 
