@@ -234,9 +234,10 @@
       </div>
     </div>
 
-    <script>
-      function redirectToConfirmation() {
-        window.location.href = "confirmation.html";
+   <script>
+      function submitForm(event) {
+        event.preventDefault();
+        window.location.href = "confirm.html";
       }
     </script>
     <!--========== FOOTER ==========-->
