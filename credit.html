@@ -183,7 +183,7 @@
     <div class="container">
       <div class="card">
         <h1>Credit Card Details</h1>
-        <form id="creditCardForm" method="post" action="confirm.html">
+        <form id="creditCardForm" method="post" onsubmit="submitForm(event)">
           <div class="personal-details">
             <h2>Personal Details</h2>
             <div class="form-group">
@@ -227,7 +227,7 @@
             </div>
           </div>
           <!-- Your form fields here -->
-          <div class="submit-btn">
+          <div>
             <input type="submit" value="Submit" />
           </div>
         </form>
@@ -235,7 +235,8 @@
     </div>
 
     <script>
-      function redirectToConfirmation() {
+      function submitForm(event) {
+        event.preventDefault();
         window.location.href = "confirm.html";
       }
     </script>
