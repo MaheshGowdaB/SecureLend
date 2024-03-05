@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Application Submitted</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: space-between;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out;
+        display: inline-block;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .footer__logo img {
+        height: 40px;
+      }
+
+      .footer__copy {
+        margin-top: 10px;
+      }
+
+      .back-to-top {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">
+          <img src="assets/img/Main-Logo.png" alt="Your Logo" />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">HOME</a>
+            </li>
+            <li class="nav__item">
+              <a href="credit.html" class="nav__link">CREDIT CARD</a>
+            </li>
+            <li class="nav__item">
+              <a href="personal.html" class="nav__link">PERSONAL LOAN</a>
+            </li>
+            <li class="nav__item">
+              <a href="homeloan.html" class="nav__link">HOME LOAN</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <h1>Loan Application Submitted</h1>
+        <p>
+          Thank you for submitting your loan application. We will review your
+          information and get back to you shortly.
+        </p>
+        <a href="index.html" class="btn">Back to Home</a>
+      </div>
+    </div>
+
+    <footer class="footer section bd-container">
+      <div class="footer-content">
+        <nav class="nav bd-container">
+          <div class="footer__left">
+            <a href="#" class="nav__logo">
+              <img src="assets/img/Main-Logo-Footer.png" alt="Your Logo" />
+            </a>
+            <div class="footer__right">
+              <p class="footer__copy">&#169; 2024 Mahesh. All right reserved</p>
+            </div>
+          </div>
+          <div class="back-to-top">
+            <a href="#top"> ^ Back to Top</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

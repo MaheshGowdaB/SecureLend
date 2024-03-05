@@ -3,22 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--========== BOX ICONS ==========-->
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+      .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    <title>Responsive website</title>
-    <script>
-      window.onload = function () {
-        window.scrollTo(0, 0);
-      };
-    </script>
+      .card {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        margin-top: auto;
+        text-align: center;
+      }
+
+      .footer__logo img {
+        height: 40px;
+      }
+
+      .footer__copy {
+        margin-top: 10px;
+      }
+
+      .back-to-top {
+        margin-top: 20px;
+      }
+    </style>
 
     <!-- Google Tag Manager -->
     <script>
@@ -52,17 +136,16 @@
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
+    <noscript>
+      <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-M82LCZG2"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+      ></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!--========== HEADER ==========-->
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <a href="#" class="nav__logo">
@@ -77,7 +160,7 @@
               <a href="credit.html" class="nav__link">CREDIT CARD</a>
             </li>
             <li class="nav__item">
-              <a href="perssonal.html" class="nav__link">PERSONAL LOAN</a>
+              <a href="personal.html" class="nav__link">PERSONAL LOAN</a>
             </li>
             <li class="nav__item">
               <a href="homeloan.html" class="nav__link">HOME LOAN</a>
@@ -92,175 +175,62 @@
         </div>
       </nav>
     </header>
-
-    <main class="l-main">
-      <!--========== HOME ==========-->
-      <section class="home" id="home">
-        <div class="home__container bd-container bd-grid">
-          <div class="home__data">
-            <h1 class="home__title">Hello!!!</h1>
-            <h1 class="home__subtitle">We Are Creative<br />Digital Agency.</h1>
-            <p class="home_paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <br />
-            <a href="#" class="button">SEND MESSAGE</a>
+    <div class="container">
+      <div class="card">
+        <h1>Credit card Application</h1>
+        <div class="personal-details">
+          <h2>Personal Details</h2>
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required />
           </div>
-
-          <img src="assets/img/Image-1.png" alt="" class="home__img" />
-        </div>
-      </section>
-
-      <!--========== WORK SHOWCASE ==========-->
-      <section class="work section bd-container" id="work">
-        <div class="work bd-grid">
-          <div class="work__data">
-            <h1 class="work__title">WORK SHOWCASE.</h1>
-            <div class="row">
-              <div class="column">
-                <img
-                  src="assets/img/Artwork.png"
-                  alt="Work Image 1"
-                  class="work__img"
-                />
-                <img
-                  src="assets/img/Image-4.jpg"
-                  alt="Work Image 2"
-                  class="work__img"
-                />
-              </div>
-              <div class="column">
-                <img
-                  src="assets/img/Image-2.jpg"
-                  alt="Work Image 3"
-                  class="work__img"
-                />
-                <img
-                  src="assets/img/Image-5.jpg"
-                  alt="Work Image 4"
-                  class="work__img"
-                />
-              </div>
-              <div class="column">
-                <img
-                  src="assets/img/Image-3.jpg"
-                  alt="Work Image 5"
-                  class="work__img"
-                />
-                <img
-                  src="assets/img/Image-6.jpg"
-                  alt="Work Image 6"
-                  class="work__img"
-                />
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required />
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
           </div>
         </div>
-      </section>
-      <div class="show-me-more-button">
-        <a href="#" class="button">SHOW ME MORE</a>
+        <div class="address-details">
+          <h2>Address Details</h2>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required />
+          </div>
+          <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required />
+          </div>
+          <div class="form-group">
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required />
+          </div>
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required />
+          </div>
+        </div>
+        <div class="submit-btn">
+          <input type="submit" value="Submit" />
+        </div>
       </div>
+    </div>
 
-      <!--========== LOGOS ==========-->
-      <section class="logos section bd-container" id="logos">
-        <div class="logos bd-grid">
-          <!-- Logos -->
-          <div class="logo-row">
-            <img src="assets/img/Logo-1.png" alt="Logo 1" class="logo" />
-            <img src="assets/img/Logo-2.png" alt="Logo 2" class="logo" />
-            <img src="assets/img/Logo-3.png" alt="Logo 3" class="logo" />
-            <img src="assets/img/Logo-4.png" alt="Logo 4" class="logo" />
-            <img src="assets/img/Logo-5.png" alt="Logo 5" class="logo" />
-          </div>
-        </div>
-      </section>
-
-      <!--========== ABOUT ==========-->
-      <section class="about section bd-container" id="about">
-        <div class="about bd-grid">
-          <div class="about__data">
-            <h1 class="about__title">ABOUT US.</h1>
-            <div class="row">
-              <div class="column">
-                <img src="assets/img/Image-7.jpg" alt="Person 1" />
-                <div class="person-box">
-                  <div class="person-details">
-                    <p class="person-name">Luke Skywalker</p>
-                    <p class="person-domain">Web Designer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <img src="assets/img/Image-8.jpg" alt="Person 2" />
-                <div class="person-box">
-                  <div class="person-details">
-                    <p class="person-name">Luke Skywalker</p>
-                    <p class="person-domain">Web Designer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <h3 class="little-about-us">Little About Us</h3>
-                <p class="about-explanation">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <a href="#" class="read-more">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--========== CONTACT ==========-->
-      <section class="contact section bd-container" id="contact">
-        <div class="contact bd-grid">
-          <div class="contact__data">
-            <h1 class="contact__title">Newsletter</h1>
-            <div class="row">
-              <div class="column">
-                <form class="contact-form">
-                  <p class="contact-explanation">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <br />
-                  <input type="email" placeholder="Email" />
-                  <div class="send message-button">
-                    <a href="#" class="button">SUBSCRIBE</a>
-                  </div>
-                </form>
-              </div>
-              <div class="column">
-                <img
-                  src="assets/img/Image-9.jpg"
-                  alt="Contact Image"
-                  class="contact_img"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--========== ICONS ==========-->
-      <section class="icons section bd-container" id="icons">
-        <div class="icons bd-grid">
-          <div class="icon">
-            <img src="assets/img/Icon-1.png" alt="Facebook Icon" />
-          </div>
-          <div class="icon">
-            <img src="assets/img/Icon-2.png" alt="Twitter Icon" />
-          </div>
-          <div class="icon">
-            <img src="assets/img/Icon-3.png" alt="Browser Icon" />
-          </div>
-        </div>
-      </section>
-    </main>
-
+    <script>
+      function redirectToConfirmation() {
+        window.location.href = "confirmation.html";
+      }
+    </script>
     <!--========== FOOTER ==========-->
     <footer class="footer section bd-container">
       <div class="footer-content">
@@ -270,9 +240,7 @@
               <img src="assets/img/Main-Logo-Footer.png" alt="Your Logo" />
             </a>
             <div class="footer__right">
-              <p class="footer__copy">
-                &#169; 2020 thewebpeople. All right reserved
-              </p>
+              <p class="footer__copy">&#169; 2024 Mahesh. All right reserved</p>
             </div>
           </div>
           <div class="back-to-top">
@@ -281,11 +249,5 @@
         </nav>
       </div>
     </footer>
-
-    <!--========== SCROLL REVEAL ==========-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--========== MAIN JS ==========-->
-    <script src="assets/js/main.js"></script>
   </body>
 </html>
